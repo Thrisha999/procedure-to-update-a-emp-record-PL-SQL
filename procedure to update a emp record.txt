@@ -1,0 +1,19 @@
+--Query:to update employee record in relation
+
+--PL/SQL Block:
+create or replace
+procedure update_emp(id empsal.EID%type)
+is
+begin
+	update empsal
+	set salary=salary+2000
+	where EID=id;
+end;
+/
+--output:
+
+Procedure created.
+
+SQL> exec update_emp(111)
+
+PL/SQL procedure successfully completed.
